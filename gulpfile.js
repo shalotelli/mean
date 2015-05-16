@@ -108,12 +108,12 @@ gulp.task('minify-css', [ 'copy-build' ], function () {
 });
 
 gulp.task('watch', function () {
-  gulp.watch([ watchFiles.assetsDir + 'index.html' ], [ 'copy' ]);
-  gulp.watch([ watchFiles.appFiles ], [ 'app', 'copy' ]);
-  gulp.watch([ watchFiles.viewFiles ], [ 'templates', 'copy' ]);
-  gulp.watch([ watchFiles.sassFiles ], [ 'styles', 'copy' ]);
-  gulp.watch([ watchFiles.imageFiles ], [ 'copy' ]);
-  gulp.watch([ watchFiles.dependencyFiles ], [ 'bower-files', 'copy' ]);
+  gulp.watch([ watchFiles.assetsDir + 'index.html' ], [ 'copy-dev' ]);
+  gulp.watch([ watchFiles.appFiles ], [ 'app', 'copy-dev' ]);
+  gulp.watch([ watchFiles.viewFiles ], [ 'templates', 'copy-dev' ]);
+  gulp.watch([ watchFiles.sassFiles ], [ 'styles', 'copy-dev' ]);
+  gulp.watch([ watchFiles.imageFiles ], [ 'copy-dev' ]);
+  gulp.watch([ watchFiles.dependencyFiles ], [ 'bower-files', 'copy-dev' ]);
 });
 
 gulp.task('dev', [
